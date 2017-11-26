@@ -5,18 +5,18 @@ subplot(1,2,1);
 axis([0 1 0 1]);
 axis equal
 hold on
-n =10; %Number of Points
+n =500; %Number of Points
 delay = 0.1;
 lol1 = 0;
 lol2 = 0;
 %% Generate Points
-% [X, Y] = Gen_Random(n);
+[X, Y] = Gen_Random(n);
 plot(X, Y, 'k*');
 points = [X',Y'];
-% points = [points , points(:,1)+points(:,2) ];
-% points = sortrows(points, -3);
-% points = [points , points(:,1)+points(:,2) ];
-% points = sortrows(points, -3);
+points = [points , points(:,1)+points(:,2) ];
+points = sortrows(points, -3);
+points = [points , points(:,1)+points(:,2) ];
+points = sortrows(points, -3);
 %% Graph Generation.
 points = points(:,1:2);
 points = [[1 1]; points; [0 0] ];
